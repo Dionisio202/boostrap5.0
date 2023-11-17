@@ -1,0 +1,13 @@
+create TABLE bodega(
+id_bod varchar(3) primary KEY,
+nombre varchar(25) not null 
+);
+
+create table  producto(
+codigo varchar(4) primary KEY,
+ nombre varchar(25) not null,
+precio DECIMAL NOT NULL,
+ cantidad int not null,
+ id_bod varchar(3) not null,
+    foreign key(id_bod) REFERENCES bodega(id_bod)
+);
